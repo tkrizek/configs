@@ -18,7 +18,6 @@ alias mosh='compile-ssh-config && mosh'
 
 # --- Programs ---
 alias emacs='/usr/bin/emacs -nw'
-alias sleep='systemctl suspend && slock'
 
 
 # === Console editor ===
