@@ -1,0 +1,13 @@
+background yes
+out_to_x no
+out_to_console yes
+update_interval 1
+total_run_times 0
+use_spacer none
+
+TEXT
+^fg(\#666666)${cpu cpu1}%^fg() \
+^fg(\#888888)${mem}^fg() \
+^fg(\#666666)Vol ${execi 1 amixer sget 'Master',0 | grep '^  Front L' | sed 's/^[^[]*\[/[/g' | sed 's/\[[^%]*dB\] //g' | sed 's/^\[.*off\]/[-]/g' | sed 's/ \[on\]//g'}^fg() \
+^fg(\#888888)Bat ${execi 1 /home/tkrizek/.xmonad/battery.sh}^fg() \
+^fg(\#aaaaaa)${execi 1 date +'%F %a %R'}^fg()
