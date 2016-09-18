@@ -1,5 +1,11 @@
+! Font rendering settings
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            true
+Xft*hintstyle:		hintslight
+
 ! Improve fonts by turning on subpixel aliasing
-Xft.lcdfilter: lcddefault
+Xft*lcdfilter: lcddefault
 
 ! Select font
 XTerm*faceName: "Inconsolata"
