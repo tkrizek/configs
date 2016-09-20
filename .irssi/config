@@ -417,7 +417,7 @@ settings = {
     # Solarized
     theme = "solarized-universal";
     hilight_color = "= %R";
-    use_status_window = "no";
+    use_status_window = "yes";
   };
 };
 hilights = (
@@ -476,9 +476,11 @@ windows = {
       }
     );
   };
+  6 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
 };
 mainwindows = {
   3 = { first_line = "37"; lines = "17"; };
-  2 = { first_line = "19"; lines = "18"; };
   1 = { first_line = "1"; lines = "18"; };
+  2 = { first_line = "19"; lines = "18"; };
 };
+ignores = ( { level = "JOINS PARTS QUITS NICKS"; } );
