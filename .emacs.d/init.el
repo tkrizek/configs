@@ -15,6 +15,8 @@
 
 ;; === Key bindings ===
 (global-set-key (kbd "C-x r") 'rgrep)
+(global-set-key (kbd "<next>") 'scroll-up-command)
+(global-set-key (kbd "<prior>") 'scroll-down-command)
 
 
 ;; === Editor behaviour ===
