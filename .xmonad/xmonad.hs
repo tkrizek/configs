@@ -42,7 +42,7 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
 --- Workspace labels
-myWorkspaces = ["1:dev", "2:dev", "3:dev", "4:web", "5:notes", "6:chat", "7:mail", "8:music", "9:etc"]
+myWorkspaces = ["~:mail", "1:dev", "2:dev", "3:dev", "4:web", "5:notes", "6:chat", "7:music", "8:etc", "9:etc"]
 
 --- Use Win key instead of Alt key as modifier
 modMask' :: KeyMask
@@ -134,7 +134,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- mod-[1..9] %! Switch to workspace N
     -- mod-shift-[1..9] %! Move client to workspace N
     [((m .|. modMask, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+        | (i, k) <- zip (XMonad.workspaces conf) ([xK_grave] ++ [xK_1 .. xK_9])
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
  
