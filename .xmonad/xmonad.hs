@@ -179,7 +179,7 @@ main = do
           --- avoid struts to not occupy status bar space
           , layoutHook          = avoidStruts $ layoutHook defaultConfig
           --- open new windows below and make them active
-          , manageHook          = insertPosition Below Newer <+> manageDocks <+> manageHook defaultConfig
+          , manageHook          = insertPosition End Newer <+> manageDocks <+> manageHook defaultConfig
           --- dockEventHook to ignore status bar
           , handleEventHook     = docksEventHook <+> handleEventHook defaultConfig
           , logHook             = myLogHook dzenLeftBar >> fadeInactiveLogHook 0xdddddddd
