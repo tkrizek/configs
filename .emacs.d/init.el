@@ -13,6 +13,10 @@
 (package-initialize)
 
 
+;; === Key bindings ===
+(global-set-key (kbd "C-x r") 'rgrep)
+
+
 ;; === Editor behaviour ===
 ;; Set the paragraph width for M-q to 79 characters.
 (setq-default fill-column 79)
@@ -54,11 +58,6 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-
-
-;; === Workaround / fixes ===
-;; Fix M-x rgrep
-(setq grep-program "/usr/bin/grep")
 
 
 ;; === Color Theme ===
