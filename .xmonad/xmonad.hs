@@ -106,8 +106,8 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     --, ((0,                          0x1008ff17  ), spawn "rhythmbox-client --next")
     --, ((0,                          0x1008ff16  ), spawn "rhythmbox-client --previous")
     -- brightness
-    , ((0, xF86XK_MonBrightnessUp), spawn "xbacklight +20")
-    , ((0, xF86XK_MonBrightnessDown), spawn "xbacklight -20")
+    , ((0, xF86XK_MonBrightnessUp), spawn "echo 250 > /sys/class/backlight/intel_backlight/brightness")
+    , ((0, xF86XK_MonBrightnessDown), spawn "echo 1 > /sys/class/backlight/intel_backlight/brightness")
     
     -- layouts
     , ((modMask,                    xK_space    ), sendMessage NextLayout)
