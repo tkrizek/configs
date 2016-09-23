@@ -12,6 +12,9 @@
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 (package-initialize)
 
+;; Use helm for completion.
+(require 'helm-config)
+
 
 ;; === Key bindings ===
 (global-set-key (kbd "C-x r") 'rgrep)
@@ -72,7 +75,10 @@
  '(custom-enabled-themes (quote (sanityinc-solarized-light)))
  '(custom-safe-themes
    (quote
-    ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default))))
+    ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
+ '(package-selected-packages
+   (quote
+    (helm-projectile helm yaml-mode vagrant-tramp haskell-mode elpy color-theme-sanityinc-solarized))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
