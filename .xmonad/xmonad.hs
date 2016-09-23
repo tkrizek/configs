@@ -91,7 +91,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,                    xK_t        ), spawn $ XMonad.terminal conf)
     , ((modMask .|. shiftMask,      xK_k        ), kill)
     , ((modMask,                    xK_l        ), spawn "slock")
-    , ((modMask .|. shiftMask,      xK_l        ), spawn "systemctl suspend && slock")
+    , ((modMask .|. shiftMask,      xK_l        ), spawn "slock & systemctl suspend")
     -- Programs
     , ((controlMask,                xK_Print    ), spawn "sleep 0.2; scrot -s -e 'mv $f ~/screenshots/'")
     , ((0,                          xK_Print    ), spawn "scrot -e 'mv $f ~/screenshots/'")
