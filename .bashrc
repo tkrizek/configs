@@ -20,6 +20,12 @@ alias mosh='compile-ssh-config && mosh'
 alias emacs='/usr/bin/emacs -nw'
 
 
+# === Functions ===
+dev-scp() {
+    scp $1 $2:/usr/lib/python2.7/site-packages/$1
+}
+
+
 # === Console editor ===
 export VISUAL="/usr/bin/emacs -nw"
 export EDITOR="$VISUAL"
