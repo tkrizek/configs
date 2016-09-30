@@ -58,7 +58,7 @@ colorYellow         = "#E6DB74"
 colorWhite          = "#CCCCC6"
  
 colorNormalBorder   = "#CCCCC6"
-colorFocusedBorder  = "#fd971f"
+colorFocusedBorder  = "#2ae1f9"
  
 -- Font 
 barFont  = "terminus"
@@ -128,7 +128,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
  
     -- quit, or restart
     , ((modMask .|. shiftMask,      xK_q        ), io (exitWith ExitSuccess))
-    , ((modMask,                    xK_q        ), spawn "killall conky dzen2 && xmonad --recompile && xmonad --restart")
+    , ((modMask,                    xK_q        ), spawn "killall conky dzen2 ; xmonad --recompile ; xmonad --restart")
     ]
     ++
     -- mod-[1..9] %! Switch to workspace N
@@ -184,4 +184,5 @@ main = do
           , handleEventHook     = docksEventHook <+> handleEventHook defaultConfig
           , logHook             = myLogHook dzenLeftBar >> fadeInactiveLogHook 0xdddddddd
           , borderWidth         = 2
+          , focusedBorderColor         = colorFocusedBorder
 }
