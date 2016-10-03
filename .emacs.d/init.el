@@ -44,6 +44,9 @@
 ;; Never show startup screen.
 (setq inhibit-startup-screen t)
 
+;; Show line numbers
+(global-linum-mode t)
+
 
 ;; === Elpy ===
 ;; Load elpy environment for Python editing.
@@ -56,6 +59,9 @@
   (condition-case nil (elpy-goto-definition)
     (error (elpy-rgrep-symbol (thing-at-point 'symbol)))))
 (define-key elpy-mode-map (kbd "M-.") 'goto-def-or-rgrep)
+
+;; disable highlight indentation mode
+(add-hook 'python-mode-hook (highlight-indentation-mode 0))
 
 
 ;; === TRAMP ===
