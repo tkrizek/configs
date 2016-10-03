@@ -57,6 +57,12 @@
 ;;(add-to-list 'load-path "~/.emacs.d/vagrant-tramp/")
 ;;(load "vagrant-tramp")
 
+;; Ignore Version control for remote files
+(setq vc-ignore-dir-regexp
+      (format "\\(%s\\)\\|\\(%s\\)"
+              vc-ignore-dir-regexp
+              tramp-file-name-regexp))
+
 
 ;; === Autosave ===
 ;; Place all auto-save files in temp directory.
