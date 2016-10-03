@@ -1,3 +1,6 @@
+! Select 256 color terminal
+XTerm*termName: xterm-256color
+
 ! Font rendering settings
 Xft*dpi:                96
 Xft*antialias:          true
@@ -12,7 +15,6 @@ XTerm*faceName: "Inconsolata"
 XTerm*faceSize: 12
 
 XTerm*saveLines: 20000
-XTerm*termName: xterm-color
 XTerm**ttyModes: erase ^?
 
 ! Fix BackSpace key in Emacs + XTerm
