@@ -16,11 +16,22 @@
 (require 'helm-config)
 
 
+;; === Keyboard macros ===
+(fset 'rgrep-next
+   "\C-xo\C-i\C-m")
+(put 'rgrep-next 'kmacro t)
+(fset 'rgrep-prev
+   "\C-xo\C-[[Z\C-m")
+(put 'rgrep-prev 'kmacro t)
+
+
 ;; === Key bindings ===
 (global-set-key (kbd "C-x r") 'rgrep)
 (global-set-key (kbd "C-x C-g") 'helm-projectile)
 (global-set-key (kbd "<next>") 'scroll-up-command)
 (global-set-key (kbd "<prior>") 'scroll-down-command)
+(global-set-key (kbd "<f5>") 'rgrep-next)
+(global-set-key (kbd "<f6>") 'rgrep-prev)
 
 
 ;; === Editor behaviour ===
