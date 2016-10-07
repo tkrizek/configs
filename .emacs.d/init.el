@@ -15,6 +15,9 @@
 ;; Use helm for completion.
 (require 'helm-config)
 
+;; Ergo emacs for key bindings
+(require 'ergoemacs-mode)
+
 
 ;; === Keyboard macros ===
 (fset 'rgrep-next
@@ -26,13 +29,19 @@
 
 
 ;; === Key bindings ===
-(global-set-key (kbd "C-x r") 'rgrep)
-(global-set-key (kbd "C-x C-g") 'helm-projectile)
+(setq ergoemacs-theme "lvl1")
+(setq ergoemacs-keyboard-layout "us") ;; Assumes QWERTY keyboard layout
+
+;; custom keybindings
+(global-set-key (kbd "<f3>") 'rgrep)
+(global-set-key (kbd "C-x M-f") 'helm-projectile)
 (global-set-key (kbd "<next>") 'scroll-up-command)
 (global-set-key (kbd "<prior>") 'scroll-down-command)
 (global-set-key (kbd "<f5>") 'rgrep-next)
 (global-set-key (kbd "<f6>") 'rgrep-prev)
 
+;; ergo emacs mode
+(ergoemacs-mode 1)
 
 ;; === Editor behaviour ===
 ;; Set the paragraph width for M-q to 79 characters.
@@ -102,7 +111,7 @@
     ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
  '(package-selected-packages
    (quote
-    (ldap-mode helm-projectile helm yaml-mode vagrant-tramp haskell-mode elpy color-theme-sanityinc-solarized))))
+    (persistent-soft ergoemacs-mode ldap-mode helm-projectile helm yaml-mode vagrant-tramp haskell-mode elpy color-theme-sanityinc-solarized))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
