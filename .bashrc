@@ -9,6 +9,7 @@ alias ls="ls --color"
 # --- IPA Tools ---
 alias vptool='/home/tkrizek/Projects/labtool/vptool'
 alias ipatool='/home/tkrizek/git/freeipa-tools/ipatool'
+alias dev-syncvm='/home/tkrizek/git/freeipa-tools/dev-syncvm.sh'
 
 # --- SSH (multiple configs)
 alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
