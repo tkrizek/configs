@@ -95,7 +95,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- Programs
     , ((controlMask,                xK_Print    ), spawn "sleep 0.2; scrot -s -e 'mv $f ~/screenshots/'")
     , ((0,                          xK_Print    ), spawn "scrot -e 'mv $f ~/screenshots/'")
-    , ((modMask,                    xK_e        ), spawn "xterm -e '/usr/bin/emacs -nw'")
+    , ((modMask,                    xK_e        ), spawn "/usr/bin/emacs")
     , ((modMask,                    xK_i        ), spawn "xterm -e '/usr/bin/irssi'")
     , ((modMask,		    xK_f        ), spawn "firefox")
     -- Media Keys
