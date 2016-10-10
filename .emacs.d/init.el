@@ -15,9 +15,6 @@
 ;; Use helm for completion.
 (require 'helm-config)
 
-;; Ergo emacs for key bindings
-(require 'ergoemacs-mode)
-
 
 ;; === Keyboard macros ===
 (fset 'rgrep-next
@@ -29,9 +26,6 @@
 
 
 ;; === Key bindings ===
-(setq ergoemacs-theme "lvl1")
-(setq ergoemacs-keyboard-layout "us") ;; Assumes QWERTY keyboard layout
-
 ;; custom keybindings
 (global-set-key (kbd "<f3>") 'rgrep)
 (global-set-key (kbd "C-x M-f") 'helm-projectile)
@@ -40,8 +34,6 @@
 (global-set-key (kbd "<f5>") 'rgrep-next)
 (global-set-key (kbd "<f6>") 'rgrep-prev)
 
-;; ergo emacs mode
-(ergoemacs-mode 1)
 
 ;; === Editor behaviour ===
 ;; Set the paragraph width for M-q to 79 characters.
