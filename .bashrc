@@ -5,6 +5,7 @@ PS1="[\A \u@\h \w]$ "
 # === Aliases ====
 alias sudo="sudo "
 alias ls="ls --color"
+alias caps="xmodmap ~/.Xmodmap"
 
 # --- IPA Tools ---
 alias vptool='/home/tkrizek/Projects/labtool/vptool'
