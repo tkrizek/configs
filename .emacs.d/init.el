@@ -17,11 +17,13 @@
 
 
 ;; === Keyboard macros ===
+
 (fset 'rgrep-next
-   "\C-xo\C-i\C-m")
+   [?\C-x ?o tab return])
 (put 'rgrep-next 'kmacro t)
+
 (fset 'rgrep-prev
-   "\C-xo\C-[[Z\C-m")
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 111 S-iso-lefttab return] 0 "%d")) arg)))
 (put 'rgrep-prev 'kmacro t)
 
 
