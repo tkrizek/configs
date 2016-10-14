@@ -36,6 +36,13 @@
 (global-set-key (kbd "<f5>") 'rgrep-next)
 (global-set-key (kbd "<f6>") 'rgrep-prev)
 
+;; --- custom functions ---
+;; match all lines beginning with class or def
+(global-set-key (kbd "M-\\")
+		(lambda (&optional nlines)
+		  (interactive "P")
+		  (occur "^[[:space:]]*\\(class\\|def\\) " nlines)))
+
 
 ;; === Editor behaviour ===
 ;; Set the paragraph width for M-q to 79 characters.
