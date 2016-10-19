@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# NOTE: In order for this to work, when the lid is closed, the system MUST ignore it,
+#       not suspend the machne.
+
 
 USERS=$(last | grep still | cut -d " " -f1 | uniq)
 
