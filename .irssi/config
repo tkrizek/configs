@@ -418,6 +418,8 @@ settings = {
     theme = "solarized-universal";
     hilight_color = "= %R";
     use_status_window = "yes";
+    autolog_path = "~/.irssi/logs/$tag/$0.log";
+    autolog = "yes";
   };
 };
 hilights = (
