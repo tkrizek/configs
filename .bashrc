@@ -27,6 +27,10 @@ dev-scp() {
     scp $1 $2:/usr/lib/python2.7/site-packages/$1
 }
 
+dev-pep8() {
+    git diff HEAD~${1:-1} -U0 | pep8 --diff
+}
+
 
 # === Console editor ===
 export VISUAL="/usr/bin/emacs -nw"
