@@ -92,6 +92,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask,      xK_k        ), kill)
     , ((modMask,                    xK_l        ), spawn "slock")
     , ((modMask .|. shiftMask,      xK_l        ), spawn "slock & systemctl suspend")
+    , ((modMask,                    xK_c        ), spawn "/home/tkrizek/.xmonad/.xmonadrc")
     -- Programs
     , ((controlMask,                xK_Print    ), spawn "sleep 0.2; scrot -s -e 'mv $f ~/screenshots/'")
     , ((0,                          xK_Print    ), spawn "scrot -e 'mv $f ~/screenshots/'")
@@ -169,6 +170,7 @@ myStatusBar = "conky -c /home/tkrizek/.xmonad/.conkyrc | dzen2 -x '960' -w '960'
 main = do
     dzenLeftBar <- spawnPipe myXmonadBar
     dzenRightBar <- spawnPipe myStatusBar
+    spawn "/home/tkrizek/.xmonad/.xmonadrc"
     xmonad
       --- urgency hook for notifications
       $ withUrgencyHook dzenUrgencyHook { args = ["-bg", "black", "-fg", "#00ffff", "-xs", "1"], duration = 2500000 }
