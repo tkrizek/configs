@@ -147,7 +147,7 @@ channels = (
   { name = "#freeipa"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#sssd"; chatnet = "freenode"; autojoin = "no"; },
   { name = "#ipa"; chatnet = "redhat"; autojoin = "yes"; },
-  { name = "#ipa-brno"; chatnet = "redhat"; autojoin = "yes"; },
+  { name = "#ipa-brno"; chatnet = "redhat"; autojoin = "no"; },
   { name = "#devel"; chatnet = "redhat"; autojoin = "yes"; },
   { name = "#brno"; chatnet = "redhat"; autojoin = "yes"; }
 );
@@ -440,23 +440,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#ipa-brno";
-        tag = "redhat";
-      }
-    );
-    sticky = "yes";
-  };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#freeipa";
         tag = "Freenode";
       }
     );
   };
-  4 = {
+  3 = {
     items = (
       {
         type = "CHANNEL";
@@ -466,7 +455,7 @@ windows = {
       }
     );
   };
-  5 = {
+  4 = {
     items = (
       {
         type = "CHANNEL";
@@ -476,11 +465,10 @@ windows = {
       }
     );
   };
-  6 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  5 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
 };
 mainwindows = {
-  3 = { first_line = "37"; lines = "17"; };
-  1 = { first_line = "1"; lines = "18"; };
-  2 = { first_line = "19"; lines = "18"; };
+  2 = { first_line = "28"; lines = "26"; };
+  1 = { first_line = "1"; lines = "27"; };
 };
 ignores = ( { level = "JOINS PARTS QUITS NICKS"; } );
