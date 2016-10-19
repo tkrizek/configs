@@ -93,6 +93,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,                    xK_l        ), spawn "slock")
     , ((modMask .|. shiftMask,      xK_l        ), spawn "slock & systemctl suspend")
     , ((modMask,                    xK_c        ), spawn "/home/tkrizek/.xmonad/.xmonadrc")
+    , ((modMask,                    xK_d        ), spawn "/home/tkrizek/.xmonad/dock_helper.sh")
     -- Programs
     , ((controlMask,                xK_Print    ), spawn "sleep 0.2; scrot -s -e 'mv $f ~/screenshots/'")
     , ((0,                          xK_Print    ), spawn "scrot -e 'mv $f ~/screenshots/'")
@@ -121,7 +122,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask,      xK_n        ), windows W.swapDown)                          -- swap the focused window with the next window
     , ((modMask .|. shiftMask,      xK_p        ), windows W.swapUp)                            -- swap the focused window with the previous window
     , ((modMask,                    xK_Return   ), windows W.swapMaster)
-    , ((modMask,                    xK_d        ), withFocused $ windows . W.sink)              -- Push window back into tiling
+    , ((modMask,                    xK_j        ), withFocused $ windows . W.sink)              -- Push window back into tiling
     , ((modMask,                    xK_s        ), sendMessage Shrink)                          -- %! Shrink a master area
     , ((modMask,                    xK_x        ), sendMessage Expand)                          -- %! Expand a master area
     , ((modMask,                    xK_comma    ), sendMessage (IncMasterN 1))
