@@ -10,4 +10,4 @@ TEXT
 ^fg(\#888888)${mem}^fg() \
 ^fg(\#666666)Vol ${execi 1 amixer sget 'Master',0 | grep '^  Front L' | sed 's/^[^[]*\[/[/g' | sed 's/\[[^%]*dB\] //g' | sed 's/^\[.*off\]/[-]/g' | sed 's/ \[on\]//g'}^fg() \
 ^fg(\#888888)Bat ${execi 1 /home/tkrizek/.xmonad/battery.sh}^fg() \
-^fg(\#aaaaaa)${execi 1 date +'%F %a %R'}^fg()
+^fg(\#aaaaaa)${execi 1 date -u +'%F %a %R'} UTC (${execi 1 date +'%R'})^fg()
