@@ -9,7 +9,7 @@ alias caps="xmodmap ~/.Xmodmap"
 alias CAPS="xdotool key Caps_Lock"
 
 # --- IPA Tools ---
-alias vptool='/home/tkrizek/Projects/labtool/vptool'
+alias dev-vm='/home/tkrizek/Projects/labtool/vptool'
 alias ipatool='/home/tkrizek/git/freeipa-tools/ipatool'
 alias dev-syncvm='/home/tkrizek/git/freeipa-tools/dev-syncvm.sh'
 
