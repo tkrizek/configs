@@ -15,6 +15,8 @@
 ;; Use helm for completion.
 (require 'helm-config)
 
+;; Used for getting things under cursor.
+(require 'thingatpt)
 
 ;; === Keyboard macros ===
 
@@ -43,6 +45,11 @@
 		  (interactive "P")
 		  (occur "^[[:space:]]*\\(class\\|def\\) " nlines)))
 
+;; find all occurences of word
+(global-set-key (kbd "M-s s")
+		(lambda (&optional nlines)
+		  (interactive "P")
+		  (occur (thing-at-point 'symbol) nlines)))
 
 ;; === Editor behaviour ===
 ;; Set the paragraph width for M-q to 79 characters.
