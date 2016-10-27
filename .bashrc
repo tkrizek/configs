@@ -12,6 +12,7 @@ alias CAPS="xdotool key Caps_Lock"
 alias dev-vm='/home/tkrizek/Projects/labtool/vptool'
 alias ipatool='/home/tkrizek/git/freeipa-tools/ipatool'
 alias dev-syncvm='/home/tkrizek/git/freeipa-tools/dev-syncvm.sh'
+alias dev-ci-lab-pssh="pssh -p 10 -t 0 -O 'StrictHostKeyChecking no' -h ~/dev/vm-ci-hosts"
 
 # --- SSH (multiple configs)
 alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
