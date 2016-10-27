@@ -20,13 +20,13 @@
 
 ;; === Keyboard macros ===
 
-(fset 'rgrep-next
-   [?\C-x ?o tab return])
-(put 'rgrep-next 'kmacro t)
+(fset 'next-occur-in-other
+   [?\C-x ?o ?\M-n return])
+(put 'next-occur-in-other 'kmacro t)
 
-(fset 'rgrep-prev
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 111 S-iso-lefttab return] 0 "%d")) arg)))
-(put 'rgrep-prev 'kmacro t)
+(fset 'prev-occur-in-other
+   [?\C-x ?o ?\M-p return])
+(put 'prev-occur-in-other 'kmacro t)
 
 
 ;; === Key bindings ===
@@ -35,8 +35,8 @@
 (global-set-key (kbd "C-x M-f") 'helm-projectile)
 (global-set-key (kbd "<next>") 'scroll-up-command)
 (global-set-key (kbd "<prior>") 'scroll-down-command)
-(global-set-key (kbd "<f5>") 'rgrep-next)
-(global-set-key (kbd "<f6>") 'rgrep-prev)
+(global-set-key (kbd "<f5>") 'next-occur-in-other)
+(global-set-key (kbd "<f6>") 'prev-occur-in-other)
 
 ;; --- custom functions ---
 ;; match all lines beginning with class or def
@@ -50,6 +50,7 @@
 		(lambda (&optional nlines)
 		  (interactive "P")
 		  (occur (thing-at-point 'symbol) nlines)))
+
 
 ;; === Editor behaviour ===
 ;; Set the paragraph width for M-q to 79 characters.
