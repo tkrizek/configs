@@ -34,6 +34,11 @@ dev-pep8() {
     git diff HEAD~${1:-1} -U0 | pep8 --diff
 }
 
+dev-rpms() {
+    now=$(date "+%F-%H-%M")
+    scp -r dist/rpms $1:/tmp/rpms-$now
+}
+
 
 # === Console editor ===
 export VISUAL="/usr/bin/emacs -nw"
