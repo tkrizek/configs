@@ -68,6 +68,9 @@
 ;; Reload open buffers when changed.
 (global-auto-revert-mode t)
 
+;; Highlight current line
+(global-hl-line-mode t)
+
 
 ;; === Elpy ===
 ;; Load elpy environment for Python editing.
