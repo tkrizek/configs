@@ -19,6 +19,7 @@ alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ss
 alias ssh='compile-ssh-config && ssh'
 alias scp='compile-ssh-config && scp'
 alias mosh='compile-ssh-config && mosh'
+alias pssh='pssh -p 10 -t 0 -O "StrictHostKeyChecking no"'
 
 # --- Programs ---
 alias emacs='/usr/bin/emacs -nw'
